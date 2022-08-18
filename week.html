@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUST DO IT</title>
+    <link rel="shortcut icon" href="img/common/favicon-32x32.png" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Jua&family=Nanum+Gothic:wght@400;700;800&display=swap');
+    </style>
+    <link rel="stylesheet" href="css/clock.css">
+    <link rel="stylesheet" href="css/day.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/week.css">
+    <script src="https://kit.fontawesome.com/672db09baa.js" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/day.js"></script>
+    <!-- <script src="js/clock.js"></script> -->
+    <script src="js/week.js"></script>
+
+</head>
+<body>
+    <header>
+        <div class="inner">
+            <h1><a href="index.html">JUST DO IT</a></h1>
+            
+            <ul id="gnb">
+                <li><a href="#">My List</a></li>
+                <li><a href="week.html">Week</a></li>
+                <li><a href="day.html">Day</a></li>
+            </ul>
+            <ul class="util">
+                <li><a href="#" onclick="popupOpen()">Pricing</a></li>
+                <li><a href="#" onclick="popupOpen()">Help</a></li>
+                <li><a href="#" onclick="poplogOpen()">Login</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+            <div class="popup_readying">
+                <input class="popupClose" type="button" onclick="popupClose()" value="X" >
+                <p>준비중 입니다.</p>
+                <img src="img/sorry.png">
+                <p>조금만 기달려주세요</p>
+            </div>
+
+            <div class="popup_login">
+                <input class="poplogClose" type="button" onclick="poplogClose()" value="X" >
+                <ul>
+                    <fieldset>
+                        <p>
+                            <label for="id">아이디</label>
+                            <input type="text" id="id" name="id" required placeholder="아이디">
+                        </p>
+                        <p>
+                            <label for="password">비밀번호</label>
+                            <input type="password" id="password" name="password" required placeholder="영문/숫자 4~8자 이내">
+                        </p>
+                        <div class="btnLogin">
+                            <button type="sumbit" class="btnOk">로그인</button>
+                        </div>
+                    </fieldset>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section class="index_clock">
+        <div class="inner">
+            <div class="clock_area">
+                <div class="half_1">
+                    <div class="sec_cal">
+                        <div class="cal_nav">
+                          <a href="javascript:;" class="nav-btn go-prev">prev</a>
+                          <div class="year-month"></div>
+                          <a href="javascript:;" class="nav-btn go-next">next</a>
+                        </div>
+                        <div class="cal_wrap">
+                          <div class="days">
+                            <div class="day">MON</div>
+                            <div class="day">TUE</div>
+                            <div class="day">WED</div>
+                            <div class="day">THU</div>
+                            <div class="day">FRI</div>
+                            <div class="day">SAT</div>
+                            <div class="day">SUN</div>
+                          </div>
+                          <div class="dates"></div>
+                        </div>
+                      </div>
+                </div>
+                <div class="half_2">
+                    <div class="p_title">
+                        <p>오늘 할 일</p>
+                    </div>
+                    <img src="img/note2.png" alt="">
+                    <div id="form">
+                        <input type="text" id="item" autofocus="true" placeholder="오늘 할 일을 입력해주세요">
+                        <button type="button" id="add" class="addBtn">추가</button>
+                    </div>
+                    <div class="p_note">
+                        <div id="itemList">
+                
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="inner">
+            <div class="upper">
+                <h1>YONGMIN</h1>
+                <ul>
+                    <li><a href>Policy</a></li>
+                    <li><a href>Terms</a></li>
+                    <li><a href>Family Site</a></li>
+                    <li><a href>Sitemap</a></li>
+                </ul>
+            </div>
+
+            <div class="lower">
+                <address>
+                    경기도 서울시 고양시 서대문구 종로구 은평구 876-543 대한건물<br>
+                    TEL : 02-1111-2222  C.P : 010-1234-5678
+                </address>
+                <p>
+                    2022 YONGMIN &copy; copyright all right seserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

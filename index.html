@@ -1,1 +1,123 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><link rel="icon" href="/favicon.ico"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="Web site created using create-react-app"/><link rel="apple-touch-icon" href="/logo192.png"/><link rel="manifest" href="/manifest.json"/><title>React App</title><script defer="defer" src="/static/js/main.c05dc3c6.js"></script><link href="/static/css/main.e6c13ad2.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div></body></html>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUST DO IT</title>
+    <link rel="shortcut icon" href="img/common/favicon-32x32.png" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Jua&family=Nanum+Gothic:wght@400;700;800&display=swap');
+    </style>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/clock.css">
+    <script src="https://kit.fontawesome.com/672db09baa.js" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/clock.js"></script>
+    <script>
+    </script>
+
+</head>
+<body>
+    <header>
+        <div class="inner">
+            <h1><a href="index.html">JUST DO IT</a></h1>
+            
+            <ul id="gnb">
+                <li><a href="#">My List</a></li>
+                <li><a href="week.html">Week</a></li>
+                <li><a href="day.html">Day</a></li>
+            </ul>
+            
+            <ul class="util">
+                <li><a href="#" onclick="popupOpen()">Pricing</a></li>
+                <li><a href="#" onclick="popupOpen()">Help</a></li>
+                <li><a href="#" onclick="poplogOpen()">Login</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+            <div class="popup_readying">
+                <input class="popupClose" type="button" onclick="popupClose()" value="X" >
+                <p>준비중 입니다.</p>
+                <img src="img/sorry.png">
+                <p>조금만 기달려주세요</p>
+            </div>
+
+            <div class="popup_login">
+                <input class="poplogClose" type="button" onclick="poplogClose()" value="X" >
+                <ul>
+                    <fieldset>
+                        <p>
+                            <label for="id">아이디</label>
+                            <input type="text" id="id" name="id" required placeholder="아이디">
+                        </p>
+                        <p>
+                            <label for="password">비밀번호</label>
+                            <input type="password" id="password" name="password" required placeholder="영문/숫자 4~8자 이내">
+                        </p>
+                        <div class="btnLogin">
+                            <button type="sumbit" class="btnOk">로그인</button>
+                        </div>
+                    </fieldset>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section class="index_clock">
+        <video src="img/visual.mp4" autoplay muted loop></video>
+        <div class="inner">
+            <div class="clock_area">
+                <div class="big_aclock">
+                    <div class="brand">JUST DO IT</div>
+                    <div class="number" id="number1">1</div>
+                    <div class="number" id="number2">2</div>
+                    <div class="number" id="number3">3</div>
+                    <div class="number" id="number4">4</div>
+                    <div class="number" id="number5">5</div>
+                    <div class="number" id="number6">6</div>
+                    <div class="number" id="number7">7</div>
+                    <div class="number" id="number8">8</div>
+                    <div class="number" id="number9">9</div>
+                    <div class="number" id="number10">10</div>
+                    <div class="number" id="number11">11</div>
+                    <div class="number" id="number12">12</div>
+    
+                    <div id="center"></div>
+                    <div id="hour"></div>
+                    <div id="minute"></div>
+                    <div id="second"></div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="short_p">
+                    <img class="short_image" src="img/short.png">
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="inner">
+            <div class="upper">
+                <h1>YONGMIN</h1>
+                <ul>
+                    <li><a href>Policy</a></li>
+                    <li><a href>Terms</a></li>
+                    <li><a href>Family Site</a></li>
+                    <li><a href>Sitemap</a></li>
+                </ul>
+            </div>
+
+            <div class="lower">
+                <address>
+                    경기도 서울시 고양시 서대문구 종로구 은평구 876-543 대한건물<br>
+                    TEL : 02-1111-2222  C.P : 010-1234-5678
+                </address>
+                <p>
+                    2022 YONGMIN &copy; copyright all right seserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

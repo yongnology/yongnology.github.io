@@ -1,0 +1,418 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 14px;
+}
+body {
+    background-color: #3d72bb;
+    background-color: #1F2937;
+}
+.wrap {
+    margin-bottom: 30px;
+}
+#memberArea {
+    width: 630px;
+    height: 800px;
+    position: relative;
+    margin: 0 auto;
+    padding: 10px;
+}
+/* #memberArea h1 {
+    display: block;
+    font-size: 30px;
+    line-height: 150px;
+    text-align: center;
+    border-bottom: solid 8px #777;
+    margin-bottom: 30px;
+} */
+#memberArea h2 {
+    margin-top: 30px;
+    font-size: 1.5em;
+    font-family: 'Gamja Flower', cursive;
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
+    /* 가로1픽셀, 세로1픽셀, 번짐 0 */
+    padding-bottom: 10px;
+    text-align: right;
+    color: #999;
+}
+ul {
+    list-style: none;
+}
+fieldset {
+    border: 0;
+}
+/* 숨김 콘텐츠 */
+.hidden, legend, caption {
+    position: absolute;
+    left: -9999px;
+}
+.joinForm{
+    padding: 30px;
+    background-color: #374151;
+    border-radius: 30px;
+}
+.formSign {
+    text-align: right;
+    margin: 30px 0 10px;
+}
+.require{
+    display: inline-block;
+    width: 10px;
+    height: 12px;
+    text-indent: 10px; /* 들여쓰기를 너비만큼 하면 범위에서 없어진다. */
+    white-space: nowrap;
+    overflow: hidden;
+}
+.require::before {
+    content: "필";
+    color: red;
+    font-size: 1px;
+    position: relative;
+    left: -10px;
+    top: -5px;
+}
+#joinForm {
+    border-top: 2px solid #ccc;
+}
+#joinForm p {
+    border-bottom: 1px solid #ccc;
+    overflow: hidden;
+    position: relative;
+}
+#joinForm label {
+    float: left; /* float left하면 부모의 높이가 없어진다.*/
+    width: 140px;
+    padding: 13px 10px;
+    margin-right: 10px;
+    font-weight: bold;
+    color: #fff;
+}
+.mailing em{
+    float: left; /* float left하면 부모의 높이가 없어진다.*/
+    width: 140px;
+    padding: 13px 10px;
+    margin-right: 10px;
+    font-weight: bold;
+    color: #fff;
+}
+#joinForm .mailing label {
+    float: none;
+    padding: 10px;
+    width: auto; /* 예, 아니오의 각자 크기 auto*/
+    background: none;
+}
+#joinForm input {
+    margin: 10px 0; /* 가운데 맞추기 위해*/
+}
+#joinForm input:not([type="radio"]) {
+    border: 1px solid #aaa;
+    height: 18px;
+    padding-left: 5px;
+}
+#joinForm input[type="radio"] { /* not을 안붙일떄는 : 를 뺴야한다. */
+    margin: 0;
+}
+a.idCheck, a.findZipcode {
+    font-family: "NanumEx";
+    background-color: #fff;
+    padding: 3px 15px;
+    margin-left: 5px;
+    border-radius: 20px;
+    color: #1F2937;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+a.idCheck:hover , a.findZipcode:hover {
+    color: #fff;
+}
+a.findZipcode {
+    position: absolute;
+    left: 230px;
+    top: 10px;
+}
+.labelAddress{
+    line-height: 50px;
+}
+.mailing em {
+    font-style: normal;
+    height: 55px;
+    line-height: 35px;  /* 높이와 같게 하면 세로 가운데 정렬 */
+    font-size: 12px;
+}
+.mailing span {
+    display: block;
+    margin: 10px 0;
+    letter-spacing: -1px;
+}
+.btnJoinArea {
+    text-align: center;
+    margin: 15px 0;
+}
+.btnJoinArea button {
+    font-family: "NanumEx";
+    font-size: 1.2em;
+    color: #fff;
+    padding: 8px 20px;
+    margin: 0 5px;
+    border: 0;
+    border-radius: 3px;
+    letter-spacing: 1px; /* 자간(글자 간격)*/
+}
+.btnJoinArea .btnOk {
+    background: linear-gradient(to bottom, rgba(98,98,98,1) 0%, rgb(98,98,98) 50%, rgb(81,81,81) 100%);
+}
+.btnJoinArea .btnOk:hover {
+    background: linear-gradient(to bottom, rgb(81,81,81) 0%, rgb(98,98,98) 50%, rgba(98,98,98,1) 100%);
+    font-weight: bold;
+}
+.btnJoinArea .btnCancel {
+    /* background: linear-gradient(to bottom, rgba(145,145,145,0.8) 0%, rgb(145,145,145) 50%) rgb(81,81,81) 100%; */
+    background: linear-gradient(to bottom, rgba(98,98,98,1) 0%, rgb(98,98,98) 50%, rgb(81,81,81) 100%);
+}
+.btnJoinArea .btnCancel:hover {
+    background: linear-gradient(to bottom, rgb(81,81,81) 0%, rgb(98,98,98) 50%, rgba(98,98,98,1) 100%);
+    font-weight: bold;
+}
+
+@font-face { /* 내 브라우저를 방문하면 폰트를 다운받고 보여지게끔 함*/
+    font-family: "Nanum";
+    font-weight: 400;
+    src: url("font/NanumGothic.eot?#iefix") format("embedded-opentype"),
+        url("font/NanumGothic.woff")format("woff"),
+        url("font/NanumGothic.ttf;") format("truetype");
+}
+@font-face { /* 내 브라우저를 방문하면 폰트를 다운받고 보여지게끔 함*/
+    font-family: "NanumBold"; /* 나눔 굵음*/
+    font-weight: 600;
+    src: url("font/NanumGothicBold.eot?#iefix") format("embedded-opentype"),
+        url("font/NanumGothicBold.woff") format("woff"),
+        url("font/NanumGothicBold.ttf") format("truetype");
+}
+@font-face { /* 내 브라우저를 방문하면 폰트를 다운받고 보여지게끔 함*/
+    font-family: "NanumEX"; /* 나눔 굵음*/
+    font-weight: 900;
+    src: url("font/NanumGothicExtraBold.eot?#iefix") format("embedded-opentype"),
+        url("font/NanumGothicExtraBold.woff") format("woff"),
+}
+@font-face {
+    font-family: "webcafeIcon";
+    font-weight: 400;
+    src: url("font/webcafeIcon.eot?#iefix")format("embedded-opentype"),
+         url("font/webcafeIcon.woff")format("woff"),
+         url("font/webcafeIcon.ttf")format("truetype"),
+         url("font/webcafeIcon.svg#webcaferegular")format("svg");
+                                /* #속성 */
+}
+/* header ----------------------------- 시작 */
+header {
+    width: 960px;
+    border-bottom: 1px solid #ddd;
+    margin: 0 auto;
+}
+header .inner {
+    width: 960px;
+    margin: 0 auto;
+    position: relative;
+    margin: 0 auto;
+}
+
+/* 로고 -----------------시작 */
+header .inner h1 {
+    position: absolute;
+    left: 20px;
+    top: 30px;
+}
+header .inner h1 a {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 1;
+    font-family: 'Gamja Flower', cursive;
+    color: #888;
+    padding: 0 10px;
+}
+/* 로고 -----------------종료*/
+
+/* 우측 상단 메뉴 ----- 시작*/
+header .inner .util {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+header .inner .util li {
+    float: left;
+}
+header .inner .util li a {
+    display: block;
+    font-size: 16px;
+    line-height: 1;
+    font-family: 'Jua',sans-serif;
+    color: #999;
+    padding: 0px 10px;
+    transition: all 0.3s;
+}
+header .inner .util li a:hover {
+    color: #555;
+}
+header .inner .popup_readying {
+    position: absolute;
+    border: 5px dashed #555;
+    width: 250px;
+    height: 270px;
+    right: 10px;
+    float: right;
+    background: #fff;
+    border-radius: 30px;
+    z-index: 1000;
+    text-align: center;
+    top: 50px;
+    display: none;
+}
+header .inner .popup_readying input {
+    padding: 2px 5px;
+    border-radius: 5px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-weight: bold;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+header .inner .popup_readying input:hover {
+    background-color: #fff;
+    color: #333;
+}
+header .inner .popup_readying p {
+    padding: 10px 0;
+    font-family: 'Jua',sans-serif;
+    font-size: 20px;
+}
+header .inner .popup_readying p:nth-of-type(1) {
+    border-bottom: 5px dashed #333;
+    margin-bottom: 10px;
+}
+header .inner .popup_readying img{
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    text-align: center;
+}
+/* 우측 상단 메뉴 ----- 종료*/
+
+/* 가운데 메뉴 --- 시작 */
+header .inner #gnb {
+    position: absolute;
+    bottom: 0px;
+    right: 30%;
+}
+header .inner #gnb li {
+    float: left;
+    left: -100px;
+    width: 180px;
+    text-align: center;
+}
+header .inner #gnb li a {
+    color: #555;
+    display: block;
+    padding: 20px 40px;
+    font-size: 25px;
+    line-height: 1;
+    font-family: 'Jua',sans-serif;;
+    transition: all 0.2s;
+}
+header .inner #gnb li a:hover{
+    color: #fff;
+    background-color: #555;
+}
+/* 가운데 메뉴 --- 종료 */
+
+/* 2층 메인 --------------------------- 시작 */
+.index_clock {
+    width: 100%;
+    height: calc(100vh - 120px);
+    background: #000;
+    position: relative;
+    overflow: hidden;
+}
+.index_clock video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.index_clock .inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    /* border: 3px solid red; */  /* ----------------------------------------------*/
+}
+.index_clock .inner .short_p {
+    position: relative;
+    width: 560px;
+    height: 200px;
+    margin: 0 auto;
+    text-align: center;
+    /* border: 3px dashed yellow; */ /* 속담 영역 확인 */
+    padding-top: 0px;
+}
+.index_clock .inner > .short_p a {
+    width: 560px;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    font-family: 'Jua',sans-serif;
+
+    background-color: #fbeee0;
+    border: 2px solid #422800;
+    border-radius: 30px;
+    box-shadow: #422800 4px 4px 0 0;
+    color: #422800;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0 18px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+}
+.index_clock .inner > .short_p a:hover {
+    background-color: #fff;
+  }
+  
+.index_clock .inner > .short_p a:active {
+box-shadow: #422800 2px 2px 0 0;
+transform: translate(2px, 2px);
+}
+footer {
+    margin-top: 100px;
+    width: 960px;
+    opacity: 0.8;
+    border-radius: 10px;
+}
+footer .inner .upper {
+    width: 960px;
+}
+.lower p {
+    display: block;
+}
+#adress {
+    width: 350px;
+}
+input {
+    padding: 10px 0;
+}
+.white-f {
+    color: white;
+}

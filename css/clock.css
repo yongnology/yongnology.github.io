@@ -1,0 +1,168 @@
+.clock_area {
+    width: 550px;
+    height: 700px;
+    margin: 0 auto;
+    padding-top: 80px;
+    /* border: 3px solid red; */ /* 시계 영역 보기 */
+    position: relative;
+}
+.big_aclock {
+    opacity: 0.8;
+    width: 560px;
+    height: 560px;  /* calc 의 기준(height/2)*/
+
+    border: 4px solid black;
+    border-radius: 50%;
+    position: absolute;
+    display: block;
+    text-align: center;
+    float: left;
+    background: rgb(0,0,0);
+    background: linear-gradient(142deg, rgba(0,0,0,1) 0%, rgb(134, 132, 132) 100%);
+}
+/* 시계 숫자 부분 시작 */
+.number {
+    position: absolute;
+    z-index: 1;
+    font-size: 40px;
+    font-family: 'Jua',sans-serif;
+    color: #666;
+}
+#number12 {
+    right: 0;
+    left: 0;
+    top: 0;
+    text-align: center;
+    color: #fff;
+}
+#number6 {
+    right: 0;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    color: #fff;
+}
+#number3 {
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    right: 5px;
+    color: #fff;
+}
+#number9 {
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    left: 5px;
+    color: #fff;
+}
+#number1 {
+    top: calc(280px - 240px);
+    right: calc(280px - 140px);
+}
+#number11 {
+    top: calc(280px - 240px);
+    left: calc(280px - 140px);
+}
+#number2 {
+    top: calc(280px - 150px);
+    right: calc(280px - 240px);
+    color: #222;
+}
+#number10 {
+    top: calc(280px - 150px);
+    left: calc(280px - 240px);
+}
+#number4 {
+    bottom: calc(280px - 160px);
+    right: calc(280px - 240px);
+    color: #222;
+}
+#number8 {
+    bottom: calc(280px - 160px);
+    left: calc(280px - 240px);
+}
+#number5 {
+    bottom: calc(280px - 240px);
+    right: calc(280px - 140px);
+    color: #222;
+}
+#number7 {
+    bottom: calc(280px - 240px);
+    left: calc(280px - 140px);
+    color: #222;
+}
+/* 시계 숫자 부분 끝 */
+
+
+#center {
+    position: absolute;
+    border: 3px solid black;
+    width: 25px;
+    height: 25px;
+    top: 0;    bottom: 0;    left: 0;    right: 0;
+    background: red;
+    margin: auto;
+    border-radius: 50%;
+    z-index: 10000;
+}
+#second {
+    position: absolute;
+    height: 240px;
+    width: 6px;
+    background-color: red;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 280px;
+    transform: rotate(0deg);
+    transform-origin: center 100%; /* 50% 100% 와 같은 의미 */
+    z-index: 10;
+
+}
+#minute {
+    position: absolute;
+    height: 200px;
+    width: 12px;
+    background-color: #888;
+    border: 2px solid #222;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 280px;
+    transform: rotate(0deg);
+    transform-origin: center 100%; /* 50%(=center) 100% 와 같은 의미 */
+    border-radius: 50px 50px 0;
+    z-index: 9;
+}
+#hour {
+    position: absolute;
+    height: 140px;
+    width: 18px;
+    background-color: rgb(219, 214, 214);
+    border: 2px solid #222;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 280px;
+    transform: rotate(0deg);
+    transform-origin: center 100%; /* 50% 100% 와 같은 의미 */
+    border-radius: 50px 50px 0;
+}
+.big_aclock .brand {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin-top: 85px;
+    color: rgb(226, 226, 226);
+    font-weight: bold;
+    font-size: 20px;
+}
+#sec {
+    color: red;
+}
